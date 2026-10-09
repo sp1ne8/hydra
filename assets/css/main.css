@@ -1,0 +1,9 @@
+/* Обычный CSS: порядок подключения важен. Сборка не нужна. */
+@import url('./theme.css');
+@import url('./base.css');
+@import url('./navigation.css');
+@import url('./storefront.css');
+@import url('./account.css');
+@import url('./admin.css');
+@import url('./motion.css');
+@import url('./custom.css');

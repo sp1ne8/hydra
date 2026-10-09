@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- EDIT: заголовок вкладки и описание страницы -->
+  <title>FAQ · HYDRA</title>
+  <meta name="description" content="HYDRA — бесплатные цифровые материалы, каталог и примеры работы.">
+  <meta name="theme-color" content="#080a09">
+  <link rel="icon" type="image/png" href="./assets/images/logo.png">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <script src="./assets/js/ui.js" defer></script>
+  <script src="./assets/js/integrations.js" defer></script>
+</head>
+<body>
+<div id="app">
+  <a class="skip-link" href="#content">Перейти к содержимому</a>
+  <!-- EDIT: HEADER. Одинаковая разметка на страницах; здесь меняются логотип и ссылки. -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./index.html" aria-label="HYDRA — главная">
+        <img src="./assets/images/logo.png" width="52" height="38" alt="">
+        <span>HYDRA</span>
+      </a>
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a href="./catalog.html">Каталог</a>
+        <a href="./index.html#showcase">Примеры работы</a>
+        <a href="./index.html#how-it-works">Как это работает</a>
+        <a href="./faq.html" aria-current="page">FAQ</a>
+      </nav>
+      <div class="account-nav">
+        <a class="login-link" href="./login.html">Войти</a>
+        <a class="button compact" href="./register.html">Регистрация</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="content" class="container" data-page="faq" tabindex="-1">
+    <div class="storefront faq-page">
+      <div class="faq-page__heading"><header class="page-heading"><h1>Частые вопросы</h1></header><img src="./assets/images/logo.png" alt="" aria-hidden="true" loading="lazy"></div>
+      <!-- EDIT: FAQ. Каждый details — отдельный вопрос, ответ находится в p. -->
+      <div class="faq-list">
+        <details class="panel faq-item">
+          <summary><span class="faq-item__number" aria-hidden="true">01</span><span>Нужно ли платить за материалы?</span><span class="faq-item__toggle" aria-hidden="true"></span></summary>
+          <p>Нет. Контент в этой версии HYDRA распространяется бесплатно.</p>
+        </details>
+        <details class="panel faq-item">
+          <summary><span class="faq-item__number" aria-hidden="true">02</span><span>Где найти материалы?</span><span class="faq-item__toggle" aria-hidden="true"></span></summary>
+          <p>Выберите продукт в каталоге. Описание и доступные файлы находятся на его странице.</p>
+        </details>
+        <details class="panel faq-item">
+          <summary><span class="faq-item__number" aria-hidden="true">03</span><span>Нужна ли регистрация?</span><span class="faq-item__toggle" aria-hidden="true"></span></summary>
+          <p>Каталог и страницы продуктов можно просматривать без регистрации.</p>
+        </details>
+        <details class="panel faq-item">
+          <summary><span class="faq-item__number" aria-hidden="true">04</span><span>Почему файл пока нельзя скачать?</span><span class="faq-item__toggle" aria-hidden="true"></span></summary>
+          <p>Если на странице указано «Файлы скоро появятся», материалы ещё не опубликованы.</p>
+        </details>
+        <details class="panel faq-item">
+          <summary><span class="faq-item__number" aria-hidden="true">05</span><span>Где посмотреть примеры работы?</span><span class="faq-item__toggle" aria-hidden="true"></span></summary>
+          <p>Откройте раздел «Примеры работы» на главной странице или на странице продукта.</p>
+        </details>
+        <details class="panel faq-item">
+          <summary><span class="faq-item__number" aria-hidden="true">06</span><span>Как войти в личный кабинет?</span><span class="faq-item__toggle" aria-hidden="true"></span></summary>
+          <p>Формы входа и регистрации пока представлены как шаблоны интерфейса. Реальная авторизация ещё не подключена.</p>
+        </details>
+      </div>
+    </div>
+  </main>
+
+  <!-- EDIT: FOOTER. Контакты и юридические страницы заполняются перед публикацией. -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-identity">
+        <a class="brand footer-brand" href="./index.html" aria-label="HYDRA — главная">
+          <img src="./assets/images/logo.png" width="52" height="38" alt=""><span>HYDRA</span>
+        </a>
+        <span class="footer-description">© HYDRA <span data-year>2026</span> · цифровые продукты</span>
+      </div>
+      <a class="footer-support" href="./faq.html">Помощь и вопросы <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="container static-footer-links">
+      <a href="./privacy-policy.html">Конфиденциальность</a>
+      <a href="./terms.html">Условия использования</a>
+    </div>
+  </footer>
+</div>
+<dialog id="notice-dialog" class="notice-dialog" aria-labelledby="notice-title">
+  <h2 id="notice-title">Материалы готовятся</h2>
+  <p id="notice-copy">Файлы ещё не добавлены. Загляните позже.</p>
+  <button type="button" data-close-dialog>Понятно</button>
+</dialog>
+</body>
+</html>

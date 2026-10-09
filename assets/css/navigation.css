@@ -1,0 +1,293 @@
+/* Обычный CSS. Редактируется напрямую, сборка не требуется. */
+@charset "UTF-8";
+.site-header .header-inner {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 30px;
+  min-height: 86px;
+}
+
+.site-header .brand {
+  gap: 10px;
+}
+
+.site-header .brand img {
+  width: 44px;
+  height: 34px;
+}
+
+.site-header .brand span {
+  font-size: 1.12rem;
+  letter-spacing: 0.12em;
+}
+
+.site-header .main-nav {
+  justify-content: center;
+  gap: 2px;
+  min-width: 0;
+  margin: 0;
+}
+
+.site-header .main-nav a {
+  flex: 0 0 auto;
+  padding: 12px 14px;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.site-header .main-nav a[aria-current]::after {
+  left: 14px;
+  right: 14px;
+}
+
+.site-header .account-nav {
+  gap: 18px;
+}
+
+.account-dropdown {
+  position: relative;
+  min-width: 0;
+}
+
+.account-trigger {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 5px 10px 5px 5px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  color: var(--color-text);
+  list-style: none;
+  font-size: 0.86rem;
+  font-weight: 650;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.account-trigger::-webkit-details-marker {
+  display: none;
+}
+
+.account-trigger:hover, .account-dropdown[open] > .account-trigger {
+  border-color: var(--color-border);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.account-chevron {
+  flex: 0 0 6px;
+  width: 6px;
+  height: 6px;
+  margin: -3px 2px 0 5px;
+  border-right: 1px solid var(--color-muted);
+  border-bottom: 1px solid var(--color-muted);
+  transform: rotate(45deg);
+  transition: transform 0.2s;
+}
+
+.account-dropdown[open] .account-chevron {
+  transform: translateY(3px) rotate(225deg);
+}
+
+.account-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  z-index: 25;
+  width: 278px;
+  max-width: calc(100vw - 36px);
+  padding: 8px;
+  border: 1px solid rgba(215, 237, 197, 0.18);
+  border-radius: 17px;
+  background: #101510;
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.55);
+  animation: account-menu-appear 0.16s ease both;
+}
+
+.account-menu::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 0;
+  right: 0;
+  height: 16px;
+}
+
+.account-menu__heading {
+  padding: 14px 14px 17px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.account-menu__heading > span {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--color-text);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.account-menu__heading > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+
+.account-menu__heading > div span {
+  color: var(--color-muted);
+  font-size: 0.74rem;
+}
+
+.account-menu__heading strong {
+  color: var(--color-accent);
+  font-size: 0.86rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.account-menu__links {
+  display: grid;
+  gap: 2px;
+  padding: 8px 0;
+}
+
+.account-menu__links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 43px;
+  padding: 10px 14px;
+  border-radius: 9px;
+  color: #c1cbb9;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.account-menu__links a::after {
+  content: "↗";
+  color: #63725a;
+  font-size: 0.95rem;
+}
+
+.account-menu__links a:hover, .account-menu__links a[aria-current] {
+  background: rgba(138, 255, 53, 0.07);
+  color: var(--color-accent);
+}
+
+.account-menu__links a:hover::after, .account-menu__links a[aria-current]::after {
+  color: var(--color-accent);
+}
+
+.account-menu__footer {
+  padding-top: 6px;
+  border-top: 1px solid var(--color-border);
+}
+
+.account-menu__footer button {
+  justify-content: space-between;
+  width: 100%;
+  min-height: 43px;
+  padding: 10px 14px;
+  border-radius: 9px;
+  background: transparent;
+  color: #c1cbb9;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.account-menu__footer button:hover {
+  color: #ffb6a9;
+  background: rgba(255, 136, 114, 0.065);
+  box-shadow: none;
+  transform: none;
+}
+
+.account-menu__footer button span {
+  font-size: 0.95rem;
+}
+
+@keyframes account-menu-appear {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 1000px) {
+  html {
+    scroll-padding-top: 140px;
+  }
+  .site-header .header-inner {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0 24px;
+    min-height: 0;
+    padding-top: 15px;
+  }
+  .site-header .main-nav {
+    grid-column: 1/-1;
+    order: 3;
+    justify-content: center;
+    width: 100%;
+    margin-top: 14px;
+    padding: 6px 0;
+    border-top: 1px solid var(--color-border);
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scrollbar-width: none;
+  }
+  .site-header .main-nav::-webkit-scrollbar {
+    display: none;
+  }
+  .site-header .account-nav {
+    justify-self: end;
+  }
+}
+@media (max-width: 600px) {
+  .site-header .main-nav {
+    justify-content: flex-start;
+  }
+  .site-header .main-nav a {
+    padding: 12px 11px;
+    font-size: 0.76rem;
+  }
+  .site-header .main-nav a[aria-current]::after {
+    left: 11px;
+    right: 11px;
+  }
+}
+@media (max-width: 480px) {
+  .site-header .header-inner {
+    gap: 0 12px;
+  }
+  .site-header .brand {
+    gap: 7px;
+  }
+  .site-header .brand img {
+    width: 33px;
+    height: 29px;
+  }
+  .site-header .brand span {
+    font-size: 0.98rem;
+  }
+  .site-header .account-nav {
+    gap: 10px;
+  }
+  .account-trigger {
+    gap: 7px;
+    min-height: 40px;
+    padding-right: 7px;
+    font-size: 0.8rem;
+  }
+  .account-chevron {
+    margin-left: 3px;
+  }
+  .account-menu {
+    top: calc(100% + 9px);
+  }
+}
