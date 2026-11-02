@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Конфиденциальность · HYDRA</title>
+    <meta
+      name="description"
+      content="HYDRA — бесплатные цифровые материалы, каталог и примеры работы."
+    />
+    <meta name="theme-color" content="#080a09" />
+    <link rel="icon" type="image/png" href="./assets/images/logo.png" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <script src="./assets/js/ui.js" defer></script>
+    <script src="/assets/js/auth.js" type="module"></script>
+  </head>
+  <body>
+    <div id="app">
+      <a class="skip-link" href="#content">Перейти к содержимому</a>
+      <header class="site-header">
+        <div class="container header-inner">
+          <a class="brand" href="./index.html" aria-label="HYDRA — главная">
+            <img src="./assets/images/logo.png" width="52" height="38" alt="" />
+            <span>HYDRA</span>
+          </a>
+          <nav class="main-nav" aria-label="Основная навигация">
+            <a href="./catalog.html">Каталог</a>
+            <a href="./index.html#showcase">Примеры работы</a>
+            <a href="./index.html#how-it-works">Как это работает</a>
+            <a href="./faq.html">FAQ</a>
+          </nav>
+          <div class="account-nav" data-account-nav>
+            <div class="guest-links" data-guest-links>
+              <a href="/login.html">Войти</a
+              ><a class="button" href="/register.html">Регистрация</a>
+            </div>
+            <details class="account-menu" hidden>
+              <summary aria-label="Меню аккаунта">
+                <span
+                  class="account-avatar"
+                  data-avatar
+                  aria-hidden="true"
+                ></span
+                ><span class="account-name" data-username></span>
+              </summary>
+              <div class="account-dropdown">
+                <a href="/account.html">Личный кабинет</a
+                ><a href="/admin/" data-admin-link hidden>Админ-панель</a
+                ><button type="button" data-logout>Выйти</button>
+                <p class="form-status" role="status"></p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </header>
+
+      <main id="content" class="container" data-page="legal" tabindex="-1">
+        <article class="static-document">
+          <header class="page-heading">
+            <h1>Конфиденциальность</h1>
+            <p>Проект документа для HYDRA.</p>
+          </header>
+          <p class="notice">
+            Перед публичным запуском владелец должен заполнить контакты и
+            проверить текст с учётом фактического размещения сайта и
+            подключённых сервисов.
+          </p>
+          <section class="panel">
+            <h2>Текущая версия</h2>
+            <p>
+              HYDRA содержит бесплатный каталог и пользовательские аккаунты. При
+              регистрации сервер сохраняет имя пользователя, email, хеш пароля и
+              дату создания аккаунта. Пароль в открытом виде не хранится.
+            </p>
+            <p>
+              После входа сайт устанавливает необходимую для работы аккаунта
+              cookie сессии на 7 дней. Сервер хранит хеш идентификатора сессии.
+              Выход завершает текущий сеанс; смена пароля завершает остальные.
+              Аналитика не подключена. Шрифт и логотип загружаются с этого
+              сайта.
+            </p>
+            <p>
+              Администраторам доступен список аккаунтов и журнал регистраций,
+              успешных входов и выходов, смены паролей и изменения прав доступа.
+              Журнал не содержит паролей. Для ограничения частоты запросов
+              сервер временно хранит хеши технических идентификаторов и счётчики
+              попыток. Срок действия счётчиков — 15 минут; истёкшие записи и
+              сессии очищаются каждый час.
+            </p>
+            <p>
+              Срок хранения аккаунтов и журнала, порядок удаления данных и
+              контакт для обращений должен определить владелец до публичного
+              запуска: [СРОКИ ХРАНЕНИЯ И ПОРЯДОК УДАЛЕНИЯ].
+            </p>
+          </section>
+          <section class="panel">
+            <h2>Размещение и внешние сервисы</h2>
+            <p>
+              При размещении в интернете HTTP-запросы обрабатываются выбранным
+              хостингом. Его технические журналы, получатели данных и сроки
+              хранения определяются реальной конфигурацией: [ХОСТИНГ И СТРАНА],
+              [СРОКИ ХРАНЕНИЯ].
+            </p>
+            <p>
+              При добавлении внешних видео, изображений, аналитики или настоящих
+              форм этот документ и механизмы обработки данных необходимо
+              обновить до их включения.
+            </p>
+          </section>
+          <section class="panel">
+            <h2>Владелец и обращения</h2>
+            <p>
+              Владелец: [ФИО / НАИМЕНОВАНИЕ ОПЕРАТОРА]. Контакт: [EMAIL]. Адрес:
+              [ЮРИДИЧЕСКИЙ АДРЕС].
+            </p>
+            <p>
+              Эти сведения пока не заполнены. Дата подготовки проекта: 8 октября
+              2026 года.
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <div class="footer-identity">
+            <a
+              class="brand footer-brand"
+              href="./index.html"
+              aria-label="HYDRA — главная"
+            >
+              <img
+                src="./assets/images/logo.png"
+                width="52"
+                height="38"
+                alt=""
+              /><span>HYDRA</span>
+            </a>
+            <span class="footer-description"
+              >© HYDRA <span data-year>2026</span> · цифровые продукты</span
+            >
+          </div>
+          <a class="footer-support" href="./faq.html"
+            >Помощь и вопросы <span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <div class="container static-footer-links">
+          <a href="./privacy-policy.html">Конфиденциальность</a>
+          <a href="./terms.html">Условия использования</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

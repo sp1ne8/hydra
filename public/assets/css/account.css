@@ -1,0 +1,76 @@
+.auth-page {
+  width: min(100% - 40px, 480px);
+  margin: clamp(40px, 8vh, 96px) auto;
+}
+
+.auth-page h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+.auth-page .panel {
+  padding: clamp(22px, 4vw, 34px);
+}
+.auth-intro,
+.auth-note {
+  color: var(--color-muted);
+}
+.auth-note {
+  font-size: 0.8rem;
+  margin-top: 18px;
+}
+.auth-links {
+  text-align: center;
+  margin-top: 24px;
+}
+.auth-links a {
+  margin-left: 8px;
+}
+.auth-fields {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.auth-fields > button {
+  width: 100%;
+  margin-top: 8px;
+}
+.auth-fields small {
+  color: var(--color-muted);
+  font-weight: 400;
+}
+.form-status {
+  overflow-wrap: anywhere;
+}
+.profile-page {
+  padding-block: 56px 80px;
+}
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 24px;
+}
+.profile-details {
+  margin-block: 28px;
+}
+.profile-details div {
+  padding-block: 15px;
+  border-bottom: 1px solid var(--color-border);
+}
+.profile-details dt {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+.profile-details dd {
+  margin: 6px 0 0;
+  overflow-wrap: anywhere;
+}
+.profile-grid h2 {
+  font-size: 1.4rem;
+}
+
+@media (max-width: 760px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+}

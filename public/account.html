@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#080a09" />
+    <title>Личный кабинет · HYDRA</title>
+    <link rel="icon" href="./assets/images/logo.png" type="image/png" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/account.css" />
+    <script src="./assets/js/ui.js" defer></script>
+    <script src="./assets/js/account.js" type="module"></script>
+    <script src="/assets/js/auth.js" type="module"></script>
+  </head>
+  <body>
+    <div id="app">
+      <a class="skip-link" href="#content">Перейти к содержимому</a>
+      <header class="site-header">
+        <div class="container header-inner">
+          <a class="brand" href="./index.html" aria-label="HYDRA — главная">
+            <img src="./assets/images/logo.png" width="52" height="38" alt="" />
+            <span>HYDRA</span>
+          </a>
+          <nav class="main-nav" aria-label="Основная навигация">
+            <a href="./catalog.html">Каталог</a>
+            <a href="./index.html#showcase">Примеры работы</a>
+            <a href="./index.html#how-it-works">Как это работает</a>
+            <a href="./faq.html">FAQ</a>
+          </nav>
+          <div class="account-nav" data-account-nav>
+            <div class="guest-links" data-guest-links>
+              <a href="/login.html">Войти</a
+              ><a class="button" href="/register.html">Регистрация</a>
+            </div>
+            <details class="account-menu" hidden>
+              <summary aria-label="Меню аккаунта">
+                <span
+                  class="account-avatar"
+                  data-avatar
+                  aria-hidden="true"
+                ></span
+                ><span class="account-name" data-username></span>
+              </summary>
+              <div class="account-dropdown">
+                <a href="/account.html">Личный кабинет</a
+                ><a href="/admin/" data-admin-link hidden>Админ-панель</a
+                ><button type="button" data-logout>Выйти</button>
+                <p class="form-status" role="status"></p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </header>
+      <main id="content" class="container profile-page" tabindex="-1">
+        <p class="eyebrow">Аккаунт HYDRA</p>
+        <h1>Личный кабинет</h1>
+        <p data-profile-status role="status">Загрузка аккаунта…</p>
+        <div class="profile-grid" data-profile hidden>
+          <section class="panel">
+            <h2>Мой профиль</h2>
+            <dl class="profile-details">
+              <div>
+                <dt>Имя пользователя</dt>
+                <dd data-username></dd>
+              </div>
+              <div>
+                <dt>Email</dt>
+                <dd data-email></dd>
+              </div>
+              <div>
+                <dt>Роль</dt>
+                <dd data-role></dd>
+              </div>
+              <div>
+                <dt>Дата регистрации</dt>
+                <dd data-created></dd>
+              </div>
+            </dl>
+            <a class="button secondary" href="/admin/" data-admin-link hidden
+              >Админ-панель ↗</a
+            >
+          </section>
+          <section class="panel">
+            <h2>Смена пароля</h2>
+            <p class="auth-intro">
+              После смены пароля все остальные сеансы будут завершены.
+            </p>
+            <form
+              id="password-form"
+              class="stack"
+              method="post"
+              action="/api/auth/password"
+            >
+              <fieldset class="auth-fields stack">
+                <label for="current-password"
+                  >Текущий пароль<input
+                    id="current-password"
+                    name="currentPassword"
+                    type="password"
+                    autocomplete="current-password"
+                    required
+                    maxlength="128" /></label
+                ><label for="password"
+                  >Новый пароль<input
+                    id="password"
+                    name="password"
+                    type="password"
+                    autocomplete="new-password"
+                    required
+                    minlength="12"
+                    maxlength="128"
+                    aria-describedby="password-help" /></label
+                ><small id="password-help">От 12 до 128 символов.</small
+                ><label for="confirm-password"
+                  >Повторите пароль<input
+                    id="confirm-password"
+                    name="confirmPassword"
+                    type="password"
+                    autocomplete="new-password"
+                    required
+                    minlength="12"
+                    maxlength="128" /></label
+                ><button type="submit">Изменить пароль</button>
+              </fieldset>
+              <p class="form-status" role="status"></p>
+            </form>
+          </section>
+        </div>
+      </main>
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <div class="footer-identity">
+            <a
+              class="brand footer-brand"
+              href="./index.html"
+              aria-label="HYDRA — главная"
+            >
+              <img
+                src="./assets/images/logo.png"
+                width="52"
+                height="38"
+                alt=""
+              /><span>HYDRA</span>
+            </a>
+            <span class="footer-description"
+              >© HYDRA <span data-year>2026</span> · цифровые продукты</span
+            >
+          </div>
+          <a class="footer-support" href="./faq.html"
+            >Помощь и вопросы <span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <div class="container static-footer-links">
+          <a href="./privacy-policy.html">Конфиденциальность</a>
+          <a href="./terms.html">Условия использования</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

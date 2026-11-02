@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#080a09" />
+    <title>Админ-панель · HYDRA</title>
+    <link rel="icon" href="../assets/images/logo.png" type="image/png" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/account.css" />
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+    <script src="../assets/js/admin/dashboard.js" type="module"></script>
+  </head>
+  <body class="admin-body">
+    <a class="skip-link" href="#content">Перейти к содержимому</a>
+    <header class="admin-header">
+      <a class="brand" href="../index.html">
+        <img src="../assets/images/logo.png" width="52" height="38" alt="" />
+        <span>HYDRA</span>
+      </a>
+      <a class="admin-back" href="../index.html">На сайт ↗</a>
+    </header>
+    <main id="content" tabindex="-1">
+      <p id="page-status" class="container form-status" role="status"></p>
+      <div id="admin-login" class="admin-login">
+        <div class="admin-login__intro">
+          <p class="eyebrow">Управление сайтом</p>
+          <h1>Вход администратора</h1>
+          <p>Доступ к аккаунтам и журналу действий.</p>
+        </div>
+        <section class="panel">
+          <form
+            id="admin-login-form"
+            class="stack"
+            method="post"
+            action="/api/auth/login"
+          >
+            <fieldset class="auth-fields stack">
+              <label for="admin-email"
+                >Email
+                <input
+                  id="admin-email"
+                  name="email"
+                  type="email"
+                  autocomplete="username"
+                  required
+                  maxlength="254"
+                />
+              </label>
+              <label for="admin-password"
+                >Пароль
+                <input
+                  id="admin-password"
+                  name="password"
+                  type="password"
+                  autocomplete="current-password"
+                  required
+                  maxlength="128"
+                />
+              </label>
+              <button type="submit">Войти</button>
+            </fieldset>
+            <p class="form-status" role="status"></p>
+          </form>
+          <p class="admin-login__notice">
+            Права доступа выдаёт главный администратор.
+          </p>
+        </section>
+      </div>
+      <div id="admin-dashboard" class="container admin-dashboard" hidden>
+        <header class="admin-page-heading">
+          <div>
+            <p class="eyebrow">Управление сайтом</p>
+            <h1>Аккаунты</h1>
+            <p id="admin-identity"></p>
+          </div>
+          <button id="admin-logout" type="button" class="secondary">
+            Выйти
+          </button>
+        </header>
+        <nav class="admin-sections" aria-label="Разделы админ-панели">
+          <a href="#users-section">Пользователи</a
+          ><a href="#events-section">Журнал действий</a
+          ><a href="../account.html">Мой профиль ↗</a>
+        </nav>
+        <section
+          id="users-section"
+          class="panel admin-section"
+          aria-labelledby="users-title"
+        >
+          <div class="admin-section-heading">
+            <div>
+              <h2 id="users-title">Пользователи</h2>
+              <p id="role-help"></p>
+            </div>
+            <div class="admin-counts">
+              <span><strong id="users-total">—</strong> аккаунтов</span
+              ><span><strong id="admins-total">—</strong> администраторов</span>
+            </div>
+          </div>
+          <form id="user-search" class="admin-search" role="search">
+            <label for="search"
+              >Поиск по имени или email<input
+                id="search"
+                type="search"
+                name="search"
+                maxlength="100"
+                placeholder="Имя или email"
+            /></label>
+            <button type="submit" class="secondary">Найти</button>
+          </form>
+          <div
+            class="admin-table-wrap"
+            tabindex="0"
+            role="region"
+            aria-label="Список пользователей"
+          >
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th scope="col">Аккаунт</th>
+                  <th scope="col">Роль</th>
+                  <th scope="col">Регистрация</th>
+                  <th scope="col">Последний вход</th>
+                  <th scope="col">Права</th>
+                </tr>
+              </thead>
+              <tbody id="users-body">
+                <tr>
+                  <td colspan="5">Загрузка…</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="admin-pagination">
+            <span data-users-page></span>
+            <div>
+              <button
+                type="button"
+                class="secondary compact"
+                data-users-previous
+                disabled
+              >
+                Назад</button
+              ><button
+                type="button"
+                class="secondary compact"
+                data-users-next
+                disabled
+              >
+                Далее
+              </button>
+            </div>
+          </div>
+        </section>
+        <section
+          id="events-section"
+          class="panel admin-section"
+          aria-labelledby="events-title"
+        >
+          <div class="admin-section-heading">
+            <div>
+              <h2 id="events-title">Журнал действий</h2>
+              <p>
+                Регистрации, входы, выходы, смена паролей и назначение прав.
+              </p>
+            </div>
+          </div>
+          <div
+            class="admin-table-wrap"
+            tabindex="0"
+            role="region"
+            aria-label="Журнал действий"
+          >
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th scope="col">Дата</th>
+                  <th scope="col">Событие</th>
+                  <th scope="col">Кто</th>
+                  <th scope="col">Аккаунт</th>
+                  <th scope="col">Изменение</th>
+                </tr>
+              </thead>
+              <tbody id="events-body">
+                <tr>
+                  <td colspan="5">Загрузка…</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="admin-pagination">
+            <span data-events-page></span>
+            <div>
+              <button
+                type="button"
+                class="secondary compact"
+                data-events-previous
+                disabled
+              >
+                Назад</button
+              ><button
+                type="button"
+                class="secondary compact"
+                data-events-next
+                disabled
+              >
+                Далее
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

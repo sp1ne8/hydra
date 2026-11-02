@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/manrope-variable.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+}
+:root {
+  color-scheme: dark;
+  --color-bg: #080a09;
+  --color-surface: #101410;
+  --color-surface-raised: #171c15;
+  --color-text: #f3f5ef;
+  --color-muted: #969f94;
+  --color-accent: #8aff35;
+  --color-accent-hover: #acff6a;
+  --color-border: rgba(215, 237, 197, 0.12);
+  --radius-panel: 22px;
+  --radius-control: 10px;
+  --shadow-panel: 0 20px 70px rgba(0, 0, 0, 0.14);
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  font-synthesis: none;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}

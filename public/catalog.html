@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Каталог · HYDRA</title>
+    <meta
+      name="description"
+      content="HYDRA — бесплатные цифровые материалы, каталог и примеры работы."
+    />
+    <meta name="theme-color" content="#080a09" />
+    <link rel="icon" type="image/png" href="./assets/images/logo.png" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <script src="./assets/js/ui.js" defer></script>
+    <script src="/assets/js/auth.js" type="module"></script>
+  </head>
+  <body>
+    <div id="app">
+      <a class="skip-link" href="#content">Перейти к содержимому</a>
+      <header class="site-header">
+        <div class="container header-inner">
+          <a class="brand" href="./index.html" aria-label="HYDRA — главная">
+            <img src="./assets/images/logo.png" width="52" height="38" alt="" />
+            <span>HYDRA</span>
+          </a>
+          <nav class="main-nav" aria-label="Основная навигация">
+            <a href="./catalog.html" aria-current="page">Каталог</a>
+            <a href="./index.html#showcase">Примеры работы</a>
+            <a href="./index.html#how-it-works">Как это работает</a>
+            <a href="./faq.html">FAQ</a>
+          </nav>
+          <div class="account-nav" data-account-nav>
+            <div class="guest-links" data-guest-links>
+              <a href="/login.html">Войти</a
+              ><a class="button" href="/register.html">Регистрация</a>
+            </div>
+            <details class="account-menu" hidden>
+              <summary aria-label="Меню аккаунта">
+                <span
+                  class="account-avatar"
+                  data-avatar
+                  aria-hidden="true"
+                ></span
+                ><span class="account-name" data-username></span>
+              </summary>
+              <div class="account-dropdown">
+                <a href="/account.html">Личный кабинет</a
+                ><a href="/admin/" data-admin-link hidden>Админ-панель</a
+                ><button type="button" data-logout>Выйти</button>
+                <p class="form-status" role="status"></p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </header>
+
+      <main id="content" class="container" data-page="catalog" tabindex="-1">
+        <div class="storefront catalog-page">
+          <header class="catalog-heading">
+            <div>
+              <p class="eyebrow">
+                <span class="status-dot" aria-hidden="true"></span>Открытый
+                доступ
+              </p>
+              <h1>Выберите продукт</h1>
+              <p>Все материалы каталога доступны бесплатно.</p>
+            </div>
+            <span class="catalog-heading__symbol" aria-hidden="true">↙</span>
+          </header>
+          <div class="catalog-products">
+            <article
+              class="panel catalog-product catalog-product--free"
+              data-reveal
+            >
+              <div class="catalog-product__topline" aria-hidden="true">
+                <span>01</span><span class="catalog-product__signal"></span>
+              </div>
+              <div class="catalog-product__identity">
+                <div class="catalog-product__visual">
+                  <span aria-hidden="true">Ц</span>
+                </div>
+                <h2><a href="./product.html">Цифровая библиотека</a></h2>
+                <p class="catalog-product__description">
+                  Материалы и шаблоны для ваших проектов.
+                </p>
+              </div>
+              <div class="catalog-product__configuration">
+                <div class="free-access">
+                  <span class="status-dot" aria-hidden="true"></span>Открытый
+                  доступ
+                </div>
+                <div class="catalog-product__bottom">
+                  <div>
+                    <span class="eyebrow">Стоимость</span
+                    ><strong class="catalog-price">Бесплатно</strong>
+                  </div>
+                  <a class="button catalog-buy" href="./product.html"
+                    >Открыть</a
+                  >
+                </div>
+              </div>
+              <a class="catalog-details" href="./product.html#description"
+                >Подробнее о продукте →</a
+              >
+            </article>
+          </div>
+        </div>
+      </main>
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <div class="footer-identity">
+            <a
+              class="brand footer-brand"
+              href="./index.html"
+              aria-label="HYDRA — главная"
+            >
+              <img
+                src="./assets/images/logo.png"
+                width="52"
+                height="38"
+                alt=""
+              /><span>HYDRA</span>
+            </a>
+            <span class="footer-description"
+              >© HYDRA <span data-year>2026</span> · цифровые продукты</span
+            >
+          </div>
+          <a class="footer-support" href="./faq.html"
+            >Помощь и вопросы <span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <div class="container static-footer-links">
+          <a href="./privacy-policy.html">Конфиденциальность</a>
+          <a href="./terms.html">Условия использования</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

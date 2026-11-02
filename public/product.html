@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Цифровая библиотека · HYDRA</title>
+    <meta
+      name="description"
+      content="HYDRA — бесплатные цифровые материалы, каталог и примеры работы."
+    />
+    <meta name="theme-color" content="#080a09" />
+    <link rel="icon" type="image/png" href="./assets/images/logo.png" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <script src="./assets/js/ui.js" defer></script>
+    <script src="/assets/js/auth.js" type="module"></script>
+  </head>
+  <body>
+    <div id="app">
+      <a class="skip-link" href="#content">Перейти к содержимому</a>
+      <header class="site-header">
+        <div class="container header-inner">
+          <a class="brand" href="./index.html" aria-label="HYDRA — главная">
+            <img src="./assets/images/logo.png" width="52" height="38" alt="" />
+            <span>HYDRA</span>
+          </a>
+          <nav class="main-nav" aria-label="Основная навигация">
+            <a href="./catalog.html" aria-current="page">Каталог</a>
+            <a href="./index.html#showcase">Примеры работы</a>
+            <a href="./index.html#how-it-works">Как это работает</a>
+            <a href="./faq.html">FAQ</a>
+          </nav>
+          <div class="account-nav" data-account-nav>
+            <div class="guest-links" data-guest-links>
+              <a href="/login.html">Войти</a
+              ><a class="button" href="/register.html">Регистрация</a>
+            </div>
+            <details class="account-menu" hidden>
+              <summary aria-label="Меню аккаунта">
+                <span
+                  class="account-avatar"
+                  data-avatar
+                  aria-hidden="true"
+                ></span
+                ><span class="account-name" data-username></span>
+              </summary>
+              <div class="account-dropdown">
+                <a href="/account.html">Личный кабинет</a
+                ><a href="/admin/" data-admin-link hidden>Админ-панель</a
+                ><button type="button" data-logout>Выйти</button>
+                <p class="form-status" role="status"></p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </header>
+
+      <main id="content" class="container" data-page="catalog" tabindex="-1">
+        <div class="storefront product-page">
+          <p class="storefront-back"><a href="./catalog.html">← Каталог</a></p>
+          <div class="product-overview">
+            <div class="product-overview__copy">
+              <header class="page-heading">
+                <p class="eyebrow">Открытый доступ</p>
+                <h1>Цифровая библиотека</h1>
+                <p>Материалы и шаблоны для ваших проектов.</p>
+              </header>
+            </div>
+            <div class="product-overview__visual">
+              <span aria-hidden="true">Ц</span>
+            </div>
+          </div>
+          <section
+            class="panel product-description"
+            id="description"
+            data-reveal
+          >
+            <h2>Описание</h2>
+            <p>Материалы и шаблоны для ваших проектов.</p>
+          </section>
+          <section class="panel free-download" id="download" data-reveal>
+            <div>
+              <p class="eyebrow">Без оплаты</p>
+              <h2>Материалы продукта</h2>
+              <p>Файлы ещё не добавлены. Загляните позже.</p>
+            </div>
+            <button type="button" class="secondary" data-unavailable>
+              Файлы скоро появятся <span aria-hidden="true">↗</span>
+            </button>
+          </section>
+          <section class="showcase" data-reveal>
+            <div class="section-heading"><h2>Примеры работы</h2></div>
+            <div class="showcase-grid">
+              <figure class="showcase-card" data-reveal>
+                <div class="media-placeholder media-placeholder--photo">
+                  <div class="media-placeholder__grid" aria-hidden="true"></div>
+                  <span class="media-placeholder__index" aria-hidden="true"
+                    >01</span
+                  ><span class="media-tag">ФОТО</span>
+                  <span class="media-placeholder__icon" aria-hidden="true"
+                    ><svg viewBox="0 0 24 24" fill="none">
+                      <rect
+                        x="3.5"
+                        y="4.5"
+                        width="17"
+                        height="15"
+                        rx="2"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      />
+                      <circle cx="9" cy="10" r="1.5" fill="currentColor" />
+                      <path
+                        d="m4 17 5-4 3 2 4-5 4 5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      /></svg
+                  ></span>
+                  <div class="media-placeholder__copy">
+                    <strong>RAGE:MP</strong
+                    ><span>Место для скриншота работы продукта</span>
+                  </div>
+                </div>
+                <figcaption>
+                  <span>RAGE:MP</span><span>Фото ещё не добавлено</span>
+                </figcaption>
+              </figure>
+              <figure class="showcase-card" data-reveal>
+                <div class="media-placeholder media-placeholder--photo">
+                  <div class="media-placeholder__grid" aria-hidden="true"></div>
+                  <span class="media-placeholder__index" aria-hidden="true"
+                    >02</span
+                  ><span class="media-tag">ФОТО</span>
+                  <span class="media-placeholder__icon" aria-hidden="true"
+                    ><svg viewBox="0 0 24 24" fill="none">
+                      <rect
+                        x="3.5"
+                        y="4.5"
+                        width="17"
+                        height="15"
+                        rx="2"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      />
+                      <circle cx="9" cy="10" r="1.5" fill="currentColor" />
+                      <path
+                        d="m4 17 5-4 3 2 4-5 4 5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      /></svg
+                  ></span>
+                  <div class="media-placeholder__copy">
+                    <strong>ALT:V</strong
+                    ><span>Место для скриншота работы продукта</span>
+                  </div>
+                </div>
+                <figcaption>
+                  <span>ALT:V</span><span>Фото ещё не добавлено</span>
+                </figcaption>
+              </figure>
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <div class="footer-identity">
+            <a
+              class="brand footer-brand"
+              href="./index.html"
+              aria-label="HYDRA — главная"
+            >
+              <img
+                src="./assets/images/logo.png"
+                width="52"
+                height="38"
+                alt=""
+              /><span>HYDRA</span>
+            </a>
+            <span class="footer-description"
+              >© HYDRA <span data-year>2026</span> · цифровые продукты</span
+            >
+          </div>
+          <a class="footer-support" href="./faq.html"
+            >Помощь и вопросы <span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <div class="container static-footer-links">
+          <a href="./privacy-policy.html">Конфиденциальность</a>
+          <a href="./terms.html">Условия использования</a>
+        </div>
+      </footer>
+    </div>
+    <dialog
+      id="notice-dialog"
+      class="notice-dialog"
+      aria-labelledby="notice-title"
+    >
+      <h2 id="notice-title">Материалы готовятся</h2>
+      <p id="notice-copy">Файлы ещё не добавлены. Загляните позже.</p>
+      <button type="button" data-close-dialog>Понятно</button>
+    </dialog>
+  </body>
+</html>

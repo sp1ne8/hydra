@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Главная · HYDRA</title>
+    <meta
+      name="description"
+      content="HYDRA — бесплатные цифровые материалы, каталог и примеры работы."
+    />
+    <meta name="theme-color" content="#080a09" />
+    <link rel="icon" type="image/png" href="./assets/images/logo.png" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <script src="./assets/js/ui.js" defer></script>
+    <script src="/assets/js/auth.js" type="module"></script>
+  </head>
+  <body>
+    <div id="app">
+      <a class="skip-link" href="#content">Перейти к содержимому</a>
+      <header class="site-header">
+        <div class="container header-inner">
+          <a class="brand" href="./index.html" aria-label="HYDRA — главная">
+            <img src="./assets/images/logo.png" width="52" height="38" alt="" />
+            <span>HYDRA</span>
+          </a>
+          <nav class="main-nav" aria-label="Основная навигация">
+            <a href="./catalog.html">Каталог</a>
+            <a href="./index.html#showcase">Примеры работы</a>
+            <a href="./index.html#how-it-works">Как это работает</a>
+            <a href="./faq.html">FAQ</a>
+          </nav>
+          <div class="account-nav" data-account-nav>
+            <div class="guest-links" data-guest-links>
+              <a href="/login.html">Войти</a
+              ><a class="button" href="/register.html">Регистрация</a>
+            </div>
+            <details class="account-menu" hidden>
+              <summary aria-label="Меню аккаунта">
+                <span
+                  class="account-avatar"
+                  data-avatar
+                  aria-hidden="true"
+                ></span
+                ><span class="account-name" data-username></span>
+              </summary>
+              <div class="account-dropdown">
+                <a href="/account.html">Личный кабинет</a
+                ><a href="/admin/" data-admin-link hidden>Админ-панель</a
+                ><button type="button" data-logout>Выйти</button>
+                <p class="form-status" role="status"></p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </header>
+
+      <main id="content" class="container" data-page="home" tabindex="-1">
+        <div class="storefront home-page">
+          <section class="hero hydra-hero">
+            <div class="hydra-hero__copy">
+              <p class="eyebrow">
+                <span class="status-dot" aria-hidden="true"></span>DLC для
+                RAGE:MP / ALT:V
+              </p>
+              <h1>HYDRA</h1>
+              <p class="hydra-hero__description">
+                Бесплатные цифровые материалы. Выберите продукт в каталоге и
+                посмотрите примеры его работы.
+              </p>
+              <div class="actions">
+                <a class="button hero-cta" href="./catalog.html"
+                  >Открыть весь каталог<span aria-hidden="true">↗</span></a
+                >
+                <a class="hero-preview-link" href="#showcase"
+                  >Посмотреть примеры<span aria-hidden="true">↓</span></a
+                >
+              </div>
+            </div>
+            <figure class="hero-emblem">
+              <div class="hero-emblem__glow" aria-hidden="true"></div>
+              <div class="hero-emblem__planes" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+              <img
+                class="hero-emblem__logo"
+                src="./assets/images/logo.png"
+                width="1457"
+                height="1080"
+                alt="Логотип HYDRA"
+                fetchpriority="high"
+              />
+              <figcaption>
+                <span>HYDRA</span><span>RAGE:MP / ALT:V</span>
+              </figcaption>
+            </figure>
+            <div class="hydra-hero__baseline" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+          </section>
+          <section class="storefront-products" data-reveal>
+            <div class="section-heading">
+              <h2>Продукты</h2>
+              <a href="./catalog.html">Весь каталог →</a>
+            </div>
+            <div class="catalog-products">
+              <article
+                class="panel catalog-product catalog-product--free"
+                data-reveal
+              >
+                <div class="catalog-product__topline" aria-hidden="true">
+                  <span>01</span><span class="catalog-product__signal"></span>
+                </div>
+                <div class="catalog-product__identity">
+                  <div class="catalog-product__visual">
+                    <span aria-hidden="true">Ц</span>
+                  </div>
+                  <h2><a href="./product.html">Цифровая библиотека</a></h2>
+                  <p class="catalog-product__description">
+                    Материалы и шаблоны для ваших проектов.
+                  </p>
+                </div>
+                <div class="catalog-product__configuration">
+                  <div class="free-access">
+                    <span class="status-dot" aria-hidden="true"></span>Открытый
+                    доступ
+                  </div>
+                  <div class="catalog-product__bottom">
+                    <div>
+                      <span class="eyebrow">Стоимость</span
+                      ><strong class="catalog-price">Бесплатно</strong>
+                    </div>
+                    <a class="button catalog-buy" href="./product.html"
+                      >Открыть</a
+                    >
+                  </div>
+                </div>
+                <a class="catalog-details" href="./product.html#description"
+                  >Подробнее о продукте →</a
+                >
+              </article>
+            </div>
+          </section>
+          <section class="showcase" id="showcase" data-reveal>
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Визуально о продукте</p>
+                <h2>Примеры работы</h2>
+              </div>
+            </div>
+            <div class="showcase-grid">
+              <figure class="showcase-card" data-reveal>
+                <div class="media-placeholder media-placeholder--photo">
+                  <div class="media-placeholder__grid" aria-hidden="true"></div>
+                  <span class="media-placeholder__index" aria-hidden="true"
+                    >01</span
+                  ><span class="media-tag">ФОТО</span>
+                  <span class="media-placeholder__icon" aria-hidden="true"
+                    ><svg viewBox="0 0 24 24" fill="none">
+                      <rect
+                        x="3.5"
+                        y="4.5"
+                        width="17"
+                        height="15"
+                        rx="2"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      />
+                      <circle cx="9" cy="10" r="1.5" fill="currentColor" />
+                      <path
+                        d="m4 17 5-4 3 2 4-5 4 5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      /></svg
+                  ></span>
+                  <div class="media-placeholder__copy">
+                    <strong>RAGE:MP</strong
+                    ><span>Место для скриншота работы продукта</span>
+                  </div>
+                </div>
+                <figcaption>
+                  <span>RAGE:MP</span><span>Фото ещё не добавлено</span>
+                </figcaption>
+              </figure>
+              <figure class="showcase-card" data-reveal>
+                <div class="media-placeholder media-placeholder--photo">
+                  <div class="media-placeholder__grid" aria-hidden="true"></div>
+                  <span class="media-placeholder__index" aria-hidden="true"
+                    >02</span
+                  ><span class="media-tag">ФОТО</span>
+                  <span class="media-placeholder__icon" aria-hidden="true"
+                    ><svg viewBox="0 0 24 24" fill="none">
+                      <rect
+                        x="3.5"
+                        y="4.5"
+                        width="17"
+                        height="15"
+                        rx="2"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      />
+                      <circle cx="9" cy="10" r="1.5" fill="currentColor" />
+                      <path
+                        d="m4 17 5-4 3 2 4-5 4 5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      /></svg
+                  ></span>
+                  <div class="media-placeholder__copy">
+                    <strong>ALT:V</strong
+                    ><span>Место для скриншота работы продукта</span>
+                  </div>
+                </div>
+                <figcaption>
+                  <span>ALT:V</span><span>Фото ещё не добавлено</span>
+                </figcaption>
+              </figure>
+            </div>
+          </section>
+          <section class="panel steps" id="how-it-works" data-reveal>
+            <div class="steps__heading">
+              <h2>Как это работает</h2>
+              <img
+                src="./assets/images/logo.png"
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+              />
+            </div>
+            <ol>
+              <li>
+                <span class="steps__number" aria-hidden="true">01</span
+                ><span>Выберите продукт в каталоге.</span>
+              </li>
+              <li>
+                <span class="steps__number" aria-hidden="true">02</span
+                ><span>Посмотрите описание и примеры работы.</span>
+              </li>
+              <li>
+                <span class="steps__number" aria-hidden="true">03</span
+                ><span>Откройте доступные материалы на странице продукта.</span>
+              </li>
+            </ol>
+          </section>
+        </div>
+      </main>
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <div class="footer-identity">
+            <a
+              class="brand footer-brand"
+              href="./index.html"
+              aria-label="HYDRA — главная"
+            >
+              <img
+                src="./assets/images/logo.png"
+                width="52"
+                height="38"
+                alt=""
+              /><span>HYDRA</span>
+            </a>
+            <span class="footer-description"
+              >© HYDRA <span data-year>2026</span> · цифровые продукты</span
+            >
+          </div>
+          <a class="footer-support" href="./faq.html"
+            >Помощь и вопросы <span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <div class="container static-footer-links">
+          <a href="./privacy-policy.html">Конфиденциальность</a>
+          <a href="./terms.html">Условия использования</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
