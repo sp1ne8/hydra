@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node server/index.js",
     "dev": "node --watch server/index.js",
+    "build:pages": "node scripts/build-pages.mjs",
     "db:migrate": "node server/migrate.js",
     "admin:create": "node server/create-owner.js",
     "test": "node --test server/tests/security.test.js",

@@ -19,13 +19,7 @@ const schema = z.object({
 });
 
 export function readConfig(source = process.env) {
-  const parsed = schema.safeParse({
-    ...source,
-    NODE_ENV: source.NODE_ENV || (source.VERCEL ? "production" : undefined),
-    APP_URL: source.APP_URL || (source.VERCEL_URL ? `https://${source.VERCEL_URL}` : undefined),
-    DATABASE_URL: source.DATABASE_URL || source.POSTGRES_URL,
-    TRUST_PROXY: source.TRUST_PROXY ?? (source.VERCEL ? 1 : undefined),
-  });
+  const parsed = schema.safeParse(source);
   if (!parsed.success) {
     throw new Error(
       `Проверьте настройки: ${parsed.error.issues.map((item) => item.path.join(".")).join(", ")}. Пример — .env.example.`,
@@ -50,15 +44,6 @@ export function readConfig(source = process.env) {
     throw new Error("Для production укажите APP_URL с HTTPS.");
   }
   const origins = new Set([url.origin]);
-  if (source.VERCEL) {
-    for (const host of [
-      source.VERCEL_URL,
-      source.VERCEL_BRANCH_URL,
-      source.VERCEL_PROJECT_PRODUCTION_URL,
-    ]) {
-      if (host) origins.add(new URL(`https://${host}`).origin);
-    }
-  }
   if (!production && ["127.0.0.1", "localhost"].includes(url.hostname)) {
     url.hostname = url.hostname === "localhost" ? "127.0.0.1" : "localhost";
     origins.add(url.origin);

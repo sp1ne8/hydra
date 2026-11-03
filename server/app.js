@@ -22,7 +22,8 @@ const pages = new Set([
   "account.html",
 ]);
 
-export function createApp(pool, config, app = express()) {
+export function createApp(pool, config) {
+  const app = express();
   app.enable("strict routing");
   app.disable("x-powered-by");
   app.set("trust proxy", config.trustProxy);

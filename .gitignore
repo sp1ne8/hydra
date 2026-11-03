@@ -6,4 +6,4 @@ Thumbs.db
 .env.*
 !.env.example
 coverage/
-.vercel/
+pages-dist/

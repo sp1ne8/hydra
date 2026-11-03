@@ -30,17 +30,3 @@ test("production requires an HTTPS origin and local aliases stay in development"
   const development = readConfig({ DATABASE_URL: env.DATABASE_URL });
   assert.equal(development.origins.has("http://localhost:4173"), true);
 });
-
-test("Vercel accepts its deployment origin and integrated Postgres URL", () => {
-  const config = readConfig({
-    VERCEL: "1",
-    VERCEL_URL: "hydra-preview.vercel.app",
-    VERCEL_PROJECT_PRODUCTION_URL: "hydra.vercel.app",
-    POSTGRES_URL: "postgresql://example/db",
-  });
-  assert.equal(config.production, true);
-  assert.equal(config.trustProxy, 1);
-  assert.equal(config.databaseUrl, "postgresql://example/db");
-  assert.equal(config.appUrl, "https://hydra-preview.vercel.app");
-  assert.equal(config.origins.has("https://hydra.vercel.app"), true);
-});

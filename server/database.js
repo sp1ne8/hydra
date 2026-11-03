@@ -3,7 +3,7 @@ import pg from "pg";
 export function createPool(connectionString) {
   const pool = new pg.Pool({
     connectionString,
-    max: process.env.VERCEL ? 2 : 10,
+    max: 10,
     connectionTimeoutMillis: 5000,
   });
   pool.on("error", () => console.error("Соединение с PostgreSQL прервано."));
