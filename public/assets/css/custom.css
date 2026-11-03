@@ -117,9 +117,6 @@
   color: var(--color-muted);
   font-size: 0.78rem;
 }
-.media-placeholder {
-  width: 100%;
-}
 .catalog-product__visual::before {
   pointer-events: none;
 }

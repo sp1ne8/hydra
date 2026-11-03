@@ -1,4 +1,9 @@
-Положите сюда свои видео и скриншоты.
-В index.html и product.html замените нужный блок .media-placeholder на изображение или видео.
-Используйте относительные пути ./assets/media/filename.webp или filename.mp4.
-Соотношение сторон превью — 16:9. Примеры тегов приведены в README.md в корне проекта.
+la-night-lights.jpg — фото Qihang Fan / Unsplash:
+https://unsplash.com/photos/city-street-at-night-with-light-trails-_n-8FWMrstA
+
+la-palms-dusk.jpg — фото Venti Views / Unsplash:
+https://unsplash.com/photos/palm-trees-with-los-angeles-skyline-at-sunset-_TDdZOgzEoU
+
+Лицензия: https://unsplash.com/license
+Эти фотографии показывают атмосферу города, а не работу материалов HYDRA.
+Собственные скриншоты можно положить сюда и заменить пути в index.html и product.html.

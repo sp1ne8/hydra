@@ -54,10 +54,10 @@ npm start
 
 Тексты каталога находятся прямо в HTML. Если меняете описание товара, проверьте и `public/index.html`, и `public/catalog.html`, и `public/product.html`: сейчас это отдельные статические страницы.
 
-Примеры работы на главной и странице продукта пока представлены блоками для будущих скриншотов. Положите файлы в `public/assets/media/` и замените нужный блок `.media-placeholder` в `public/index.html` или `public/product.html`. Пример для фотографии внутри `<figure class="showcase-card">`:
+В галерее на главной и странице материала используются реальные фотографии Лос-Анджелеса с Unsplash. Они показывают атмосферу сайта, а не работу материалов HYDRA. Когда появятся собственные скриншоты, положите их в `public/assets/media/` и замените пути `src` у изображений в `public/index.html` и `public/product.html`. Подписи и `alt` тоже обновите. Пример:
 
 ```html
-<img src="./assets/media/demo.webp" alt="Пример работы HYDRA" />
+<img src="./assets/media/demo.webp" alt="Работа материала HYDRA в GTA 5 RP" />
 ```
 
 Файл для бесплатного скачивания положите в `public/assets/downloads/`. В `public/product.html` замените кнопку с атрибутом `data-unavailable` на ссылку, например:
@@ -67,6 +67,8 @@ npm start
 ```
 
 После добавления файла обновите текст «Файлы пока не опубликованы» на странице материала. Страницы `public/privacy-policy.html` и `public/terms.html` содержат незаполненные сведения владельца и правила использования материалов: их нужно привести в соответствие с реальным сайтом до публикации.
+
+Фотографии галереи: [ночная улица, Qihang Fan](https://unsplash.com/photos/city-street-at-night-with-light-trails-_n-8FWMrstA) и [панорама на закате, Venti Views](https://unsplash.com/photos/palm-trees-with-los-angeles-skyline-at-sunset-_TDdZOgzEoU). Обе размещены на условиях [Unsplash License](https://unsplash.com/license); ссылки на авторов также есть под фотографиями.
 
 ## Показ сайта на GitHub Pages
 
